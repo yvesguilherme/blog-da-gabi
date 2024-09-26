@@ -1,0 +1,519 @@
+<!doctype html>
+<html lang="pt-BR" class="h-100" data-bs-theme="dark"> <!-- data-bs-theme="dark" => deixa o tema dark -->
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Blog da Gabi - Início</title>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+</head>
+
+<body class="d-flex flex-column h-100">
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+    </symbol>
+  </svg>
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)">
+      <svg class="bi my-1 theme-icon-active me-2" width="1em" height="1em" style="fill: #712cf9;">
+        <use href="#moon-stars-fill"></use>
+      </svg>
+      <span class="visually-hidden ms-2" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light" aria-pressed="false">
+          <svg class="bi me-2 opacity-50" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-sun" viewBox="0 0 16 16">
+            <path
+              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+          </svg>
+          Light
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#sun-fill"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark"
+          aria-pressed="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi me-2 opacity-50" width="1em" height="1em"
+            fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+            <path
+              d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+            <path
+              d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+          </svg>
+          Dark
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#moon-stars-fill"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
+  <div class="container">
+    <header class="border-bottom lh-1 py-3">
+      <div class="row flex-nowrap justify-content-between align-items-center">
+        <div class="col-12 text-center">
+          <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html">Blog da Gabi
+            &#128150;</a>
+        </div>
+      </div>
+    </header>
+
+    <div class="nav-scroller py-1 mb-3 border-bottom">
+      <nav class="nav nav-underline justify-content-between" aria-label="menu">
+        <a href="index.html" class="nav-item nav-link link-body-emphasis active">Início</a>
+        <a href="resenhas.html" class="nav-item nav-link link-body-emphasis">Resenhas</a>
+        <a href="livros.html" class="nav-item nav-link link-body-emphasis">Livros</a>
+        <a href="sobre.html" class="nav-item nav-link link-body-emphasis">Sobre</a>
+        <a href="contato.html" class="nav-item nav-link link-body-emphasis">Contato</a>
+        <a href="curriculo.html" class="nav-item nav-link link-body-emphasis">Currículo</a>
+      </nav>
+    </div>
+  </div>
+
+  <main class="container mb-5">
+    <div class="p-4 p-md-5 mb-4 rounded text-body-emphasis bg-body-secondary">
+      <div class="row">
+        <div class="col-lg-8 px-0">
+          <h6 class="text-right mb-2">Leitura da semana</h6>
+          <h1 class="display-4 fst-italic">Chama de Ferro - Livro #2</h1>
+          <p class="lead my-3">Violet Sorrengail, uma jovem de vinte anos, estava destinada a entrar na Divisão dos
+            Escribas,
+            levando uma vida
+            relativamente tranquila entre os livros e as aulas de História. No entanto, a general comandante das forças
+            de
+            Navarre –
+            também conhecida como sua mãe –, durona como as garras de um dragão, ordena que Violet se junte às centenas
+            de
+            candidatos que buscam se tornar a elite de seu país: cavaleiros de dragões..</p>
+          <p class="lead mb-0 text-body-emphasis text-decoration-none fw-bold">Em breve...</p>
+        </div>
+        <div class="col-lg-4 text-center">
+          <img src="imagens/livros/chama-de-ferro.png" height="370" alt="quarta-asa-livro">
+        </div>
+      </div>
+    </div>
+
+    <div class="row mb-2">
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-warning">Fantasia</strong>
+            <h3 class="mb-0">Quarta Asa - Livro #1</h3>
+            <div class="mb-1 text-body-secondary">Set 30</div>
+            <p class="card-text mb-auto">Violet Sorrengail, uma jovem de vinte anos, estava destinada a entrar na
+              Divisão dos Escribas, levando uma vida relativamente tranquila entre os livros.</p>
+            <a href="/resenhas.html#quarta-asa-resenha"
+              class="icon-link gap-1 icon-link-hover text-decoration-none stretched-link text-warning">
+              Continue lendo >
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="imagens/livros/quarta-asa.jpeg" alt="fourth-wind-book" class="bd-placeholder-img" width="160"
+              height="250" />
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="row g-0 border rounded overflow-hidden flex-md-row mb-4 shadow-sm h-md-250 position-relative">
+          <div class="col p-4 d-flex flex-column position-static">
+            <strong class="d-inline-block mb-2 text-success-emphasis">Não ficção</strong>
+            <h3 class="mb-0">Império Romano – Isaac Asimov</h3>
+            <div class="mb-1 text-body-secondary">Ago 11</div>
+            <p class="mb-auto">Em Império Romano, Isaac Asimov apresenta e elabora as principais linhas do
+              desenvolvimento desse grande poder do Mundo Antigo.</p>
+            <a href="/resenhas.html#imperio-romano-isaac-asimov-resenha"
+              class="icon-link text-decoration-none gap-1 icon-link-hover stretched-link text-success-emphasis">
+              Continue lendo >
+            </a>
+          </div>
+          <div class="col-auto d-none d-lg-block">
+            <img src="imagens/livros/imperio-romano-isaac-asimov.jpg" alt="harry-potter-livro"
+              class="bd-placeholder-img" width="160" height="250" />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="row g-5">
+      <div class="col-md-8">
+        <article class="blog-post">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            Últimas Resenhas
+          </h3>
+          <h2 class="display-5 link-body-emphasis mb-1">Viagens de Gulliver – Jonathan Swift</h2>
+          <p class="blog-post-meta">Out 1, 2024 por <strong>Yves</strong></p>
+
+          <p><strong class="text-warning">Gulliver</strong> é médico cirurgião, mas ele também adora uma aventura.
+            Seguindo seu instinto aventureiro, ele vai embarcar como
+            médico em um navio. Mas após um naufrágio, ele para numa ilha com seres minúsculos. Depois disso, ele ainda
+            vai fazer
+            mais três viagens que o levarão para os destinos mais peculiares existentes.</p>
+
+          <p>
+            Créditos: Editora Zahar
+            Volta e meia, eu gosto de procurar um clássico para ler. O curioso sobre As Viagens de Gulliver é que eu
+            sabia pouca
+            coisa sobre ele. Sabia é claro que ele tinha virado filme e que há adaptações para crianças. O fato de ter
+            adaptações
+            para crianças é muito curioso, pois ele é um livro bem denso de críticas e questões mais filosóficas. Então
+            acredito que
+            nas adaptações, o teor “aventura do livro” deve ser o foco.
+          </p>
+
+          <p>
+            As Viagens de Gulliver foi publicado em 1726, mas seu nome original era Viagens a diversos países remotos do
+            mundo, em
+            quatro partes, por Lemuel Gulliver, a princípio cirurgião e mais tarde capitão de vários navios. Somente em
+            1735 teve
+            seu nome alterado. Essa edição da Zahar vai começar com um texto de apresentação maravilhoso. Assim, ele já
+            te prepara
+            para as questões do livro, pois ele não é somente uma história no estilo relatos de viagem. Jonathan Swift
+            faz aqui uma
+            sátira para criticar a Inglaterra, a monarquia, o progresso, a ciência e o olhar arrogante do colonizador.
+            Outro ponto
+            interessante é que o autor colocou um micro resumo dos capítulos no início de cada um. Então, assim, já
+            sabemos o que
+            vai acontecer nele.
+          </p>
+
+          <p>
+            Na primeira viagem de Gulliver, ele vai parar, depois do naufrágio de seu navio, na ilha de Lilliput, terra
+            de seres
+            diminutos de 15 centímetros. Depois de acordar amarrado no chão, Gulliver logo decide conhecer esse povo e
+            explorar tudo
+            sobre a ilha e a comunidade dali. É interessante ver a relação que o autor faz com o tamanho desses seres,
+            pois Gulliver
+            ao conhecer mais os liliputianos e seus problemas, vai achar tudo muito pequeno e insignificante, com
+            problemas que ele
+            não considera temas importantes. Aqui vamos ver a semelhança do local com a Inglaterra da época. Além disso,
+            há um
+            desentendimento entre dois povos da ilha sobre qual seria o lado certo para quebrar um ovo. Aqui mais uma
+            vez o autor
+            está fazendo críticas a pessoas, partidos e povos que se desentendem pelos motivos mais banais.
+          </p>
+
+          <figure class="figure">
+            <img src="imagens/livros/viagens-de-gulliver.png" class="figure-img img-fluid rounded "
+              alt="livro-viagens-gulliver">
+            <figcaption class="figure-caption text-end">Livro Viagens de Gulliver – Jonathan Swift.</figcaption>
+          </figure>
+
+          <p class="my-4">
+            <a href="/resenhas.html#as-viagens-de-gulliver-resenha" class="text-white text-decoration-none">Continue
+              lendo...</a>
+          </p>
+
+          <nav aria-label="Page navigation example">
+            <ul class="pagination justify-content-center">
+              <li class="page-item">
+                <a class="page-link text-white disabled" href="#" aria-label="Previous">
+                  <span aria-hidden="true">&laquo;</span>
+                </a>
+              </li>
+              <li class="page-item"><a class="page-link bg-body border-light text-white active" href="#">1</a></li>
+              <li class="page-item"><a class="page-link text-white disabled" href="#">2</a></li>
+              <li class="page-item"><a class="page-link text-white disabled" href="#">3</a></li>
+              <li class="page-item"><a class="page-link text-white disabled" href="#">4</a></li>
+              <li class="page-item">
+                <a class="page-link text-white disabled" href="#" aria-label="Next">
+                  <span aria-hidden="true">&raquo;</span>
+                </a>
+              </li>
+            </ul>
+          </nav>
+        </article>
+
+        <article class="blog-post mt-5">
+          <h3 class="pb-4 mb-4 fst-italic border-bottom">
+            Classificação dos livros de Gabi
+          </h3>
+          <p>Livros que amei:</p>
+          <ol>
+            <li>A divina comédia</li>
+            <li>Harry Potter (todos)</li>
+            <li>O Hobbit</li>
+          </ol>
+          <p>Livros que não gostei:</p>
+          <ol>
+            <li>A paciente silenciosa</li>
+            <li>A gente mira no amor e acerta na solidão</li>
+            <li>Assistente do Vilão</li>
+          </ol>
+          <p>Livros que pretendo ler:</p>
+          <ul>
+            <li>Hábitos Atômicos: um Método Fácil e Comprovado de Criar Bons Hábitos e se Livrar dos Maus</li>
+            <li>A psicologia financeira: lições atemporais sobre fortuna, ganância e felicidade</li>
+            <li>Pai Rico, pai Pobre</li>
+          </ul>
+        </article>
+
+        <article class="blog-post mt-5">
+          <h2 class="display-5 link-body-emphasis mb-1">Web Stories</h2>
+          <p class="blog-post-meta">23 Ago, 2024 por <strong>Gabi Viana</strong></p>
+
+          <div class="d-flex justify-content-between" style="height: 15rem;">
+            <a href="https://www.estantediagonal.com.br/web-stories/fabien-toulme-no-brasil" target="_blank"
+              aria-label="Fabien Toulmé no Brasil! Vai perder essa oportunidade?">
+              <img src="https://www.estantediagonal.com.br/wp-content/uploads/2024/07/cropped-fabien-tolme.jpg"
+                width="160" height="100%" alt="cropped-fabien-folder" class="bd-placeholder-img rounded">
+            </a>
+
+            <a href="https://www.estantediagonal.com.br/web-stories/lancamentos-mais-populares-do-ano-ate-agora"
+              target="_blank" aria-label="Lançamentos mais populares do ano até agora">
+              <img
+                src="https://www.estantediagonal.com.br/wp-content/uploads/2024/07/cropped-goodreads_misc-640x853.png"
+                width="160" height="100%" alt="cropped-fabien-folder" class="bd-placeholder-img rounded">
+            </a>
+
+            <a href="https://www.estantediagonal.com.br/web-stories/lancamentos-de-livros-aguardados-para-julho-la-fora"
+              target="_blank" aria-label="Os livros mais aguardados para julho (lá fora)">
+              <img
+                src="https://www.estantediagonal.com.br/wp-content/uploads/2024/07/cropped-livros-lancamentos-de-julho-640x853.jpg"
+                width="160" height="100%" alt="cropped-fabien-folder" class="bd-placeholder-img rounded">
+            </a>
+
+            <a href="https://www.estantediagonal.com.br/web-stories/os-livros-mais-lidos-em-2024-segundo-o-goodreads"
+              target="_blank" aria-label="Os livros mais lidos em 2024 (segundo o Goodreads)">
+              <img src="https://www.estantediagonal.com.br/wp-content/uploads/2023/11/cropped-divulgacao-goodreads.png"
+                width="160" height="100%" alt="cropped-fabien-folder" class="bd-placeholder-img rounded">
+            </a>
+
+            <a href="https://www.estantediagonal.com.br/web-stories/jean-pierre-gibrat-chegou-no-catalogo-da-nemo"
+              target="_blank" aria-label="Jean-Pierre Gibrat chegou no catálogo da Nemo">
+              <img src="https://www.estantediagonal.com.br/wp-content/uploads/2024/07/cropped-Gibrat-Matteo.jpg"
+                width="160" height="100%" alt="cropped-fabien-folder" class="bd-placeholder-img rounded">
+            </a>
+          </div>
+        </article>
+      </div>
+
+      <div class="col-md-4">
+        <div class="position-sticky" style="top: 2rem;">
+          <!-- Sobre -->
+          <div class="p-4 mb-3 bg-body-tertiary rounded">
+            <h4 class="fst-italic">Sobre</h4>
+            <div class="d-flex justify-content-center mb-2">
+              <img class="bd-placeholder-img rounded-circle" src="imagens/profile-image.png" width="140" height="140"
+                alt="gabi-foto">
+            </div>
+            <h3 class="text-center">Gabriela</h3>
+            <p class="my-2 d-flex justify-content-evenly">
+              <a class="icon-link icon-link-hover text-black"
+                style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" target="_blank"
+                href="https://instagram.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-instagram" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0C5.829 0 5.556.01 4.703.048 3.85.088 3.269.222 2.76.42a3.9 3.9 0 0 0-1.417.923A3.9 3.9 0 0 0 .42 2.76C.222 3.268.087 3.85.048 4.7.01 5.555 0 5.827 0 8.001c0 2.172.01 2.444.048 3.297.04.852.174 1.433.372 1.942.205.526.478.972.923 1.417.444.445.89.719 1.416.923.51.198 1.09.333 1.942.372C5.555 15.99 5.827 16 8 16s2.444-.01 3.298-.048c.851-.04 1.434-.174 1.943-.372a3.9 3.9 0 0 0 1.416-.923c.445-.445.718-.891.923-1.417.197-.509.332-1.09.372-1.942C15.99 10.445 16 10.173 16 8s-.01-2.445-.048-3.299c-.04-.851-.175-1.433-.372-1.941a3.9 3.9 0 0 0-.923-1.417A3.9 3.9 0 0 0 13.24.42c-.51-.198-1.092-.333-1.943-.372C10.443.01 10.172 0 7.998 0zm-.717 1.442h.718c2.136 0 2.389.007 3.232.046.78.035 1.204.166 1.486.275.373.145.64.319.92.599s.453.546.598.92c.11.281.24.705.275 1.485.039.843.047 1.096.047 3.231s-.008 2.389-.047 3.232c-.035.78-.166 1.203-.275 1.485a2.5 2.5 0 0 1-.599.919c-.28.28-.546.453-.92.598-.28.11-.704.24-1.485.276-.843.038-1.096.047-3.232.047s-2.39-.009-3.233-.047c-.78-.036-1.203-.166-1.485-.276a2.5 2.5 0 0 1-.92-.598 2.5 2.5 0 0 1-.6-.92c-.109-.281-.24-.705-.275-1.485-.038-.843-.046-1.096-.046-3.233s.008-2.388.046-3.231c.036-.78.166-1.204.276-1.486.145-.373.319-.64.599-.92s.546-.453.92-.598c.282-.11.705-.24 1.485-.276.738-.034 1.024-.044 2.515-.045zm4.988 1.328a.96.96 0 1 0 0 1.92.96.96 0 0 0 0-1.92m-4.27 1.122a4.109 4.109 0 1 0 0 8.217 4.109 4.109 0 0 0 0-8.217m0 1.441a2.667 2.667 0 1 1 0 5.334 2.667 2.667 0 0 1 0-5.334" />
+                </svg>
+              </a>
+
+              <a class="icon-link icon-link-hover text-white"
+                style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" target="_blank"
+                href="https://threads.net/?hl=pt-br">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-threads"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M6.321 6.016c-.27-.18-1.166-.802-1.166-.802.756-1.081 1.753-1.502 3.132-1.502.975 0 1.803.327 2.394.948s.928 1.509 1.005 2.644q.492.207.905.484c1.109.745 1.719 1.86 1.719 3.137 0 2.716-2.226 5.075-6.256 5.075C4.594 16 1 13.987 1 7.994 1 2.034 4.482 0 8.044 0 9.69 0 13.55.243 15 5.036l-1.36.353C12.516 1.974 10.163 1.43 8.006 1.43c-3.565 0-5.582 2.171-5.582 6.79 0 4.143 2.254 6.343 5.63 6.343 2.777 0 4.847-1.443 4.847-3.556 0-1.438-1.208-2.127-1.27-2.127-.236 1.234-.868 3.31-3.644 3.31-1.618 0-3.013-1.118-3.013-2.582 0-2.09 1.984-2.847 3.55-2.847.586 0 1.294.04 1.663.114 0-.637-.54-1.728-1.9-1.728-1.25 0-1.566.405-1.967.868ZM8.716 8.19c-2.04 0-2.304.87-2.304 1.416 0 .878 1.043 1.168 1.6 1.168 1.02 0 2.067-.282 2.232-2.423a6.2 6.2 0 0 0-1.528-.161" />
+                </svg>
+              </a>
+
+              <a class="icon-link icon-link-hover" style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);"
+                target="_blank" href="https://facebook.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-facebook" viewBox="0 0 16 16">
+                  <path
+                    d="M16 8.049c0-4.446-3.582-8.05-8-8.05C3.58 0-.002 3.603-.002 8.05c0 4.017 2.926 7.347 6.75 7.951v-5.625h-2.03V8.05H6.75V6.275c0-2.017 1.195-3.131 3.022-3.131.876 0 1.791.157 1.791.157v1.98h-1.009c-.993 0-1.303.621-1.303 1.258v1.51h2.218l-.354 2.326H9.25V16c3.824-.604 6.75-3.934 6.75-7.951" />
+                </svg>
+              </a>
+
+              <a class="icon-link icon-link-hover text-danger"
+                style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" target="_blank"
+                href="https://youtube.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-youtube"
+                  viewBox="0 0 16 16">
+                  <path
+                    d="M8.051 1.999h.089c.822.003 4.987.033 6.11.335a2.01 2.01 0 0 1 1.415 1.42c.101.38.172.883.22 1.402l.01.104.022.26.008.104c.065.914.073 1.77.074 1.957v.075c-.001.194-.01 1.108-.082 2.06l-.008.105-.009.104c-.05.572-.124 1.14-.235 1.558a2.01 2.01 0 0 1-1.415 1.42c-1.16.312-5.569.334-6.18.335h-.142c-.309 0-1.587-.006-2.927-.052l-.17-.006-.087-.004-.171-.007-.171-.007c-1.11-.049-2.167-.128-2.654-.26a2.01 2.01 0 0 1-1.415-1.419c-.111-.417-.185-.986-.235-1.558L.09 9.82l-.008-.104A31 31 0 0 1 0 7.68v-.123c.002-.215.01-.958.064-1.778l.007-.103.003-.052.008-.104.022-.26.01-.104c.048-.519.119-1.023.22-1.402a2.01 2.01 0 0 1 1.415-1.42c.487-.13 1.544-.21 2.654-.26l.17-.007.172-.006.086-.003.171-.007A100 100 0 0 1 7.858 2zM6.4 5.209v4.818l4.157-2.408z" />
+                </svg>
+              </a>
+
+              <a class="icon-link icon-link-hover text-danger"
+                style="--bs-icon-link-transform: translate3d(0, -.125rem, 0);" target="_blank"
+                href="https://pinterest.com">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+                  class="bi bi-pinterest" viewBox="0 0 16 16">
+                  <path
+                    d="M8 0a8 8 0 0 0-2.915 15.452c-.07-.633-.134-1.606.027-2.297.146-.625.938-3.977.938-3.977s-.239-.479-.239-1.187c0-1.113.645-1.943 1.448-1.943.682 0 1.012.512 1.012 1.127 0 .686-.437 1.712-.663 2.663-.188.796.4 1.446 1.185 1.446 1.422 0 2.515-1.5 2.515-3.664 0-1.915-1.377-3.254-3.342-3.254-2.276 0-3.612 1.707-3.612 3.471 0 .688.265 1.425.595 1.826a.24.24 0 0 1 .056.23c-.061.252-.196.796-.222.907-.035.146-.116.177-.268.107-1-.465-1.624-1.926-1.624-3.1 0-2.523 1.834-4.84 5.286-4.84 2.775 0 4.932 1.977 4.932 4.62 0 2.757-1.739 4.976-4.151 4.976-.811 0-1.573-.421-1.834-.919l-.498 1.902c-.181.695-.669 1.566-.995 2.097A8 8 0 1 0 8 0" />
+                </svg>
+              </a>
+            </p>
+            <p class="mb-0">Criadora e editora do Blog da Gabi, formanda em Sistemas de Informação, apaixonada por
+              animais e há alguns anos falando sobre
+              livros na internet. Prazer, eu sou a Gabi!</p>
+          </div>
+
+          <div>
+            <h4 class="fst-italic">Postagens recentes</h4>
+            <ul class="list-unstyled">
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                  href="/resenhas.html#as-viagens-de-gulliver-resenha">
+                  <img src="/imagens/livros/viagens-de-gulliver-capa.jpg" width="117.34"
+                    alt="postagem-livro-viagens-de-gulliver" class="bd-placeholder-img">
+                  <div class="col-lg-8">
+                    <h6 class="mb-0">Resenha do livro Viagens de Gulliver</h6>
+                    <small class="text-body-secondary">01 de Outubro, 2024</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                  href="/resenhas.html#quarta-asa-resenha">
+                  <img src="/imagens/livros/quarta-asa.jpeg" width="117.34" alt="postagem-livro-chama-de-ferro"
+                    class="bd-placeholder-img">
+                  <div class="col-lg-8">
+                    <h6 class="mb-0">Resenha do livro Quarta Asa</h6>
+                    <small class="text-body-secondary">30 de Setembro, 2024</small>
+                  </div>
+                </a>
+              </li>
+              <li>
+                <a class="d-flex flex-column flex-lg-row gap-3 align-items-start align-items-lg-center py-3 link-body-emphasis text-decoration-none border-top"
+                  href="/resenhas.html#imperio-romano-isaac-asimov-resenha">
+                  <img src="/imagens/livros/imperio-romano-isaac-asimov.jpg" width="117.34"
+                    alt="postagem-livro-imperio-romano" class="bd-placeholder-img">
+                  <div class="col-lg-8">
+                    <h6 class="mb-0">Resenha do livro Império Romano</h6>
+                    <small class="text-body-secondary">11 de Agosto, 2024</small>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+          <!-- <div class="p-4">
+            <h4 class="fst-italic">Archives</h4>
+            <ol class="list-unstyled mb-0">
+              <li class="mb-1"><a class="text-decoration-none" href="#">Janeiro 2024</a></li>
+              <li class="mb-1"><a class="text-decoration-none" href="#">Fevereiro 2024</a></li>
+              <li class="mb-1"><a class="text-decoration-none" href="#">Março 2024</a></li>
+              <li class="mb-1"><a class="text-decoration-none" href="#">Abril 2024</a></li>
+              <li class="mb-1"><a class="text-decoration-none" href="#">Maio 2024</a></li>
+              <li class="mb-1"><a class="text-decoration-none" href="#">Junho 2024</a></li>
+              <li class="mb-1"><a class="text-decoration-none" href="#">Julho 2024</a></li>
+              <li class="mb-1"><a class="text-decoration-none" href="#">Agosto 2024</a></li>
+              <li class="mb-1"><a class="text-decoration-none" href="#">Setembro 2024</a></li>
+            </ol>
+          </div> -->
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="py-5 mt-auto text-center text-body-secondary bg-body-tertiary">
+    <p>Blog feito com &#128150; pela Gabi</p>
+    <p class="mb-0">
+      <a class="text-decoration-none text-white" href="#">Voltar para o topo da página</a>
+    </p>
+  </footer>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+    integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.min.js"
+    integrity="sha384-0pUGZvbkm6XF6gxjEnlmuGrJXVbNuzT9qBBavbLwCsOGabYfZo0T0to5eqruptLy"
+    crossorigin="anonymous"></script>
+  <script>
+    (() => {
+      'use strict'
+
+      const getStoredTheme = () => localStorage.getItem('theme')
+      const setStoredTheme = theme => localStorage.setItem('theme', theme)
+
+      const getPreferredTheme = () => {
+        const storedTheme = getStoredTheme()
+        if (storedTheme) {
+          return storedTheme
+        }
+
+        return window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'
+      }
+
+      const setTheme = theme => {
+        if (theme === 'auto') {
+          document.documentElement.setAttribute('data-bs-theme', (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'))
+        } else {
+          document.documentElement.setAttribute('data-bs-theme', theme)
+        }
+      }
+
+      setTheme(getPreferredTheme())
+
+      const showActiveTheme = (theme, focus = false) => {
+        const themeSwitcher = document.querySelector('#bd-theme')
+
+        if (!themeSwitcher) {
+          return
+        }
+
+        const themeSwitcherText = document.querySelector('#bd-theme-text')
+        const activeThemeIcon = document.querySelector('.theme-icon-active use')
+        const btnToActive = document.querySelector(`[data-bs-theme-value="${theme}"]`)
+        const svgOfActiveBtn = btnToActive.querySelector('svg use').getAttribute('href')
+
+        document.querySelectorAll('[data-bs-theme-value]').forEach(element => {
+          element.classList.remove('active')
+          element.setAttribute('aria-pressed', 'false')
+        })
+
+        btnToActive.classList.add('active')
+        btnToActive.setAttribute('aria-pressed', 'true')
+        activeThemeIcon.setAttribute('href', svgOfActiveBtn)
+        const themeSwitcherLabel = `${themeSwitcherText.textContent} (${btnToActive.dataset.bsThemeValue})`
+        themeSwitcher.setAttribute('aria-label', themeSwitcherLabel)
+
+        if (focus) {
+          themeSwitcher.focus()
+        }
+      }
+
+      window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', () => {
+        const storedTheme = getStoredTheme()
+        if (storedTheme !== 'light' && storedTheme !== 'dark') {
+          setTheme(getPreferredTheme())
+        }
+      })
+
+      window.addEventListener('DOMContentLoaded', () => {
+        showActiveTheme(getPreferredTheme())
+
+        document.querySelectorAll('[data-bs-theme-value]')
+          .forEach(toggle => {
+            toggle.addEventListener('click', () => {
+              const theme = toggle.getAttribute('data-bs-theme-value')
+              setStoredTheme(theme)
+              setTheme(theme)
+              showActiveTheme(theme, true)
+            })
+          })
+      })
+    })()
+  </script>
+</body>
+
+</html>
