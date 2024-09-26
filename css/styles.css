@@ -1,0 +1,12 @@
+[data-bs-theme="light"] .text-white,
+[data-bs-theme="light"] .text-body-secondary {
+  color: #212529 !important;
+}
+
+[data-bs-theme="light"] .border-light {
+  border-color: rgba(33, 37, 41, 1) !important;
+}
+
+.dropdown-item.active, .dropdown-item:active {
+background-color: #712cf9 !important;
+}

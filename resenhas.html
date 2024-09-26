@@ -7,14 +7,78 @@
   <title>Blog da Gabi - Resenhas</title>
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    @media (max-width: 575.98px) {
+      .capa-mobile {
+        width: 100% !important;
+        height: 90px !important;
+      }
+    }
+  </style>
 </head>
 
 <body class="d-flex flex-column h-100">
+  <svg xmlns="http://www.w3.org/2000/svg" class="d-none">
+    <symbol id="moon-stars-fill" viewBox="0 0 16 16">
+      <path
+        d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+      <path
+        d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+    </symbol>
+    <symbol id="sun-fill" viewBox="0 0 16 16">
+      <path
+        d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+    </symbol>
+  </svg>
+  <div class="dropdown position-fixed bottom-0 end-0 mb-3 me-3 bd-mode-toggle">
+    <button class="btn btn-bd-primary py-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button"
+      aria-expanded="false" data-bs-toggle="dropdown" aria-label="Toggle theme (dark)">
+      <svg class="bi my-1 theme-icon-active me-2" width="1em" height="1em" style="fill: #712cf9;">
+        <use href="#moon-stars-fill"></use>
+      </svg>
+      <span class="visually-hidden ms-2" id="bd-theme-text">Toggle theme</span>
+    </button>
+    <ul class="dropdown-menu dropdown-menu-end shadow" aria-labelledby="bd-theme-text">
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light"
+          aria-pressed="false">
+          <svg class="bi me-2 opacity-50" xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor"
+            class="bi bi-sun" viewBox="0 0 16 16">
+            <path
+              d="M8 11a3 3 0 1 1 0-6 3 3 0 0 1 0 6m0 1a4 4 0 1 0 0-8 4 4 0 0 0 0 8M8 0a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 0m0 13a.5.5 0 0 1 .5.5v2a.5.5 0 0 1-1 0v-2A.5.5 0 0 1 8 13m8-5a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2a.5.5 0 0 1 .5.5M3 8a.5.5 0 0 1-.5.5h-2a.5.5 0 0 1 0-1h2A.5.5 0 0 1 3 8m10.657-5.657a.5.5 0 0 1 0 .707l-1.414 1.415a.5.5 0 1 1-.707-.708l1.414-1.414a.5.5 0 0 1 .707 0m-9.193 9.193a.5.5 0 0 1 0 .707L3.05 13.657a.5.5 0 0 1-.707-.707l1.414-1.414a.5.5 0 0 1 .707 0m9.193 2.121a.5.5 0 0 1-.707 0l-1.414-1.414a.5.5 0 0 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .707M4.464 4.465a.5.5 0 0 1-.707 0L2.343 3.05a.5.5 0 1 1 .707-.707l1.414 1.414a.5.5 0 0 1 0 .708" />
+          </svg>
+          Light
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#sun-fill"></use>
+          </svg>
+        </button>
+      </li>
+      <li>
+        <button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="dark"
+          aria-pressed="true">
+          <svg xmlns="http://www.w3.org/2000/svg" class="bi me-2 opacity-50" width="1em" height="1em"
+            fill="currentColor" class="bi bi-moon-stars-fill" viewBox="0 0 16 16">
+            <path
+              d="M6 .278a.77.77 0 0 1 .08.858 7.2 7.2 0 0 0-.878 3.46c0 4.021 3.278 7.277 7.318 7.277q.792-.001 1.533-.16a.79.79 0 0 1 .81.316.73.73 0 0 1-.031.893A8.35 8.35 0 0 1 8.344 16C3.734 16 0 12.286 0 7.71 0 4.266 2.114 1.312 5.124.06A.75.75 0 0 1 6 .278" />
+            <path
+              d="M10.794 3.148a.217.217 0 0 1 .412 0l.387 1.162c.173.518.579.924 1.097 1.097l1.162.387a.217.217 0 0 1 0 .412l-1.162.387a1.73 1.73 0 0 0-1.097 1.097l-.387 1.162a.217.217 0 0 1-.412 0l-.387-1.162A1.73 1.73 0 0 0 9.31 6.593l-1.162-.387a.217.217 0 0 1 0-.412l1.162-.387a1.73 1.73 0 0 0 1.097-1.097zM13.863.099a.145.145 0 0 1 .274 0l.258.774c.115.346.386.617.732.732l.774.258a.145.145 0 0 1 0 .274l-.774.258a1.16 1.16 0 0 0-.732.732l-.258.774a.145.145 0 0 1-.274 0l-.258-.774a1.16 1.16 0 0 0-.732-.732l-.774-.258a.145.145 0 0 1 0-.274l.774-.258c.346-.115.617-.386.732-.732z" />
+          </svg>
+          Dark
+          <svg class="bi ms-auto d-none" width="1em" height="1em">
+            <use href="#moon-stars-fill"></use>
+          </svg>
+        </button>
+      </li>
+    </ul>
+  </div>
+
   <div class="container">
     <header class="border-bottom lh-1 py-3">
       <div class="row flex-nowrap justify-content-between align-items-center">
         <div class="col-12 text-center">
-          <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html">Blog da Gabi &#128150;</a>
+          <a class="blog-header-logo text-body-emphasis text-decoration-none" href="index.html">Blog da Gabi
+            &#128150;</a>
         </div>
       </div>
     </header>
@@ -37,23 +101,24 @@
         <h3 class="pb-4 mb-4 fst-italic display-4 border-bottom text-center">
           Resenhas
         </h3>
-        
+
         <article class="blog-post" id="as-viagens-de-gulliver-resenha">
-          <div class="bg-body-tertiary rounded-bottom me-md-3 pt-3 px-3 pt-md-5 px-md-5 mb-4 text-center overflow-hidden">
-            <img
-              src="https://www.estantediagonal.com.br/wp-content/uploads/2024/03/as-viagens-de-gulliver-850x200.jpg"
-              class="bg-dark shadow-sm mx-auto"
+          <div
+            class="bg-body-tertiary rounded-bottom me-md-3 pt-3 px-3 pt-md-5 px-md-5 mb-4 text-center overflow-hidden">
+            <img src="imagens/resenhas/r-capa-1.png"
+              class="bg-dark shadow-sm mx-auto capa-mobile"
               style="width: 70%; height: 300px; border-radius: 21px 21px 0 0;"
               alt="livro-imperio-romano-isaac-asimov-capa">
           </div>
-        
+
           <h2 class="display-5 link-body-emphasis mb-1">Viagens de Gulliver – Jonathan Swift</h2>
           <p class="blog-post-meta">Out 01, 2024 por <strong>Yves</strong></p>
-        
+
           <figure class="text-center">
             <blockquote class="blockquote">
               <p>
-                Viagens de Gulliver é um retrato satírico da civilização humana, suas relações e instituições marcadas pela hipocrisia,
+                Viagens de Gulliver é um retrato satírico da civilização humana, suas relações e instituições marcadas
+                pela hipocrisia,
                 pelo preconceito e pela ganância.
               </p>
             </blockquote>
@@ -61,70 +126,95 @@
               Livro: <cite title="Source Title">Viagens de Gulliver</cite>
             </figcaption>
           </figure>
-        
-          <p><strong class="text-warning">Gulliver</strong> é médico cirurgião, mas ele também adora uma aventura. Seguindo seu
+
+          <p><strong class="text-warning">Gulliver</strong> é médico cirurgião, mas ele também adora uma aventura.
+            Seguindo seu
             instinto aventureiro, ele vai embarcar como
-            médico em um navio. Mas após um naufrágio, ele para numa ilha com seres minúsculos. Depois disso, ele ainda vai fazer
+            médico em um navio. Mas após um naufrágio, ele para numa ilha com seres minúsculos. Depois disso, ele ainda
+            vai fazer
             mais três viagens que o levarão para os destinos mais peculiares existentes.</p>
-          
+
           <p>
             Créditos: Editora Zahar
-            Volta e meia, eu gosto de procurar um clássico para ler. O curioso sobre As Viagens de Gulliver é que eu sabia pouca
-            coisa sobre ele. Sabia é claro que ele tinha virado filme e que há adaptações para crianças. O fato de ter adaptações
-            para crianças é muito curioso, pois ele é um livro bem denso de críticas e questões mais filosóficas. Então acredito
+            Volta e meia, eu gosto de procurar um clássico para ler. O curioso sobre As Viagens de Gulliver é que eu
+            sabia pouca
+            coisa sobre ele. Sabia é claro que ele tinha virado filme e que há adaptações para crianças. O fato de ter
+            adaptações
+            para crianças é muito curioso, pois ele é um livro bem denso de críticas e questões mais filosóficas. Então
+            acredito
             que
             nas adaptações, o teor “aventura do livro” deve ser o foco.
           </p>
-          
+
           <p>
-            As Viagens de Gulliver foi publicado em 1726, mas seu nome original era Viagens a diversos países remotos do mundo, em
-            quatro partes, por Lemuel Gulliver, a princípio cirurgião e mais tarde capitão de vários navios. Somente em 1735 teve
-            seu nome alterado. Essa edição da Zahar vai começar com um texto de apresentação maravilhoso. Assim, ele já te prepara
-            para as questões do livro, pois ele não é somente uma história no estilo relatos de viagem. Jonathan Swift faz aqui
+            As Viagens de Gulliver foi publicado em 1726, mas seu nome original era Viagens a diversos países remotos do
+            mundo, em
+            quatro partes, por Lemuel Gulliver, a princípio cirurgião e mais tarde capitão de vários navios. Somente em
+            1735 teve
+            seu nome alterado. Essa edição da Zahar vai começar com um texto de apresentação maravilhoso. Assim, ele já
+            te prepara
+            para as questões do livro, pois ele não é somente uma história no estilo relatos de viagem. Jonathan Swift
+            faz aqui
             uma
-            sátira para criticar a Inglaterra, a monarquia, o progresso, a ciência e o olhar arrogante do colonizador. Outro ponto
-            interessante é que o autor colocou um micro resumo dos capítulos no início de cada um. Então, assim, já sabemos o que
+            sátira para criticar a Inglaterra, a monarquia, o progresso, a ciência e o olhar arrogante do colonizador.
+            Outro ponto
+            interessante é que o autor colocou um micro resumo dos capítulos no início de cada um. Então, assim, já
+            sabemos o que
             vai acontecer nele.
           </p>
-          
+
           <p>
-            Na primeira viagem de Gulliver, ele vai parar, depois do naufrágio de seu navio, na ilha de Lilliput, terra de seres
-            diminutos de 15 centímetros. Depois de acordar amarrado no chão, Gulliver logo decide conhecer esse povo e explorar
+            Na primeira viagem de Gulliver, ele vai parar, depois do naufrágio de seu navio, na ilha de Lilliput, terra
+            de seres
+            diminutos de 15 centímetros. Depois de acordar amarrado no chão, Gulliver logo decide conhecer esse povo e
+            explorar
             tudo
-            sobre a ilha e a comunidade dali. É interessante ver a relação que o autor faz com o tamanho desses seres, pois
+            sobre a ilha e a comunidade dali. É interessante ver a relação que o autor faz com o tamanho desses seres,
+            pois
             Gulliver
-            ao conhecer mais os liliputianos e seus problemas, vai achar tudo muito pequeno e insignificante, com problemas que
+            ao conhecer mais os liliputianos e seus problemas, vai achar tudo muito pequeno e insignificante, com
+            problemas que
             ele
-            não considera temas importantes. Aqui vamos ver a semelhança do local com a Inglaterra da época. Além disso, há um
-            desentendimento entre dois povos da ilha sobre qual seria o lado certo para quebrar um ovo. Aqui mais uma vez o autor
+            não considera temas importantes. Aqui vamos ver a semelhança do local com a Inglaterra da época. Além disso,
+            há um
+            desentendimento entre dois povos da ilha sobre qual seria o lado certo para quebrar um ovo. Aqui mais uma
+            vez o autor
             está fazendo críticas a pessoas, partidos e povos que se desentendem pelos motivos mais banais.
           </p>
 
           <p>
-            Já, na segunda viagem, depois de ser abandonado por sua tripulação, ele para em Brobdingnag, uma terra com seres
-            gigantes,. Assim, ao ver de perto a figura humana em dimensões bem maiores, ele vai ver o pior que temos. Tudo pra ele
-            vai ser nojento, pois ele vai ver os poros, feridas e outras coisas numa visão bem mais ampliada, causando repulsa. Só
-            que aqui, como ele é pequeno, ele vai ser tratado como brinquedo pelos gigantes. Nessa terra, o autor vai aproveitar
-            para explorar muitas questões políticas. E assim, Gulliver vai perceber que há diversas falhas no sistema político de
+            Já, na segunda viagem, depois de ser abandonado por sua tripulação, ele para em Brobdingnag, uma terra com
+            seres
+            gigantes,. Assim, ao ver de perto a figura humana em dimensões bem maiores, ele vai ver o pior que temos.
+            Tudo pra ele
+            vai ser nojento, pois ele vai ver os poros, feridas e outras coisas numa visão bem mais ampliada, causando
+            repulsa. Só
+            que aqui, como ele é pequeno, ele vai ser tratado como brinquedo pelos gigantes. Nessa terra, o autor vai
+            aproveitar
+            para explorar muitas questões políticas. E assim, Gulliver vai perceber que há diversas falhas no sistema
+            político de
             seu país.
           </p>
 
           <p>
-            Na terceira viagem, depois de seu barco ser atacado por piratas, Gulliver é resgatado por uma ilha voadora. Nessa parte,
-            ele vai passar por cinco lugares: <strong>Laputa</strong>, <strong>Balnibarbi</strong>, <strong>Glubbdubdrib</strong>, <strong>Luggnagg</strong> e <strong>Japão</strong>. Em Laputa é muito interessante
-            como o autor explora questões envolvendo às artes musicais, matemáticas e astronômicas. Já em Balnibarbi, o autor
-            aproveita para satirizar a ciência. Ele faz isso de uma maneira bem engraçada mesmo, mostrando os habitantes desse lugar
-            fazendo as pesquisas mais apuradas. Nos outros países, ele ainda vai discutir história (Glubbdubdrib) e imortalidade
+            Na terceira viagem, depois de seu barco ser atacado por piratas, Gulliver é resgatado por uma ilha voadora.
+            Nessa parte,
+            ele vai passar por cinco lugares: <strong>Laputa</strong>, <strong>Balnibarbi</strong>,
+            <strong>Glubbdubdrib</strong>, <strong>Luggnagg</strong> e <strong>Japão</strong>. Em Laputa é muito
+            interessante
+            como o autor explora questões envolvendo às artes musicais, matemáticas e astronômicas. Já em Balnibarbi, o
+            autor
+            aproveita para satirizar a ciência. Ele faz isso de uma maneira bem engraçada mesmo, mostrando os habitantes
+            desse lugar
+            fazendo as pesquisas mais apuradas. Nos outros países, ele ainda vai discutir história (Glubbdubdrib) e
+            imortalidade
             (Luggnagg).
           </p>
-        
+
           <div class="d-flex align-items-center justify-content-center mt-5">
             <figure class="figure">
-              <img
-                src="https://www.estantediagonal.com.br/wp-content/uploads/2024/03/as-viagens-de-gulliver-1.jpg"
-                class="figure-img img-fluid rounded"
-                alt="livro-viagens-gulliver"
-                style="height: 30rem;">
+              <img src="imagens/resenhas/r-livro-1.png"
+                class="figure-img img-fluid rounded" alt="livro-viagens-gulliver" style="height: 30rem;">
               <figcaption class="figure-caption text-center">Detalhes do livro por
                 <span class="text-white text-decoration-none">Autor</span>
               </figcaption>
@@ -135,12 +225,11 @@
         <hr />
 
         <article class="blog-post mt-5" id="quarta-asa-resenha">
-          <div class="bg-body-tertiary rounded-bottom me-md-3 pt-3 px-3 pt-md-5 px-md-5 mb-4 text-center overflow-hidden">
-            <img
-              src="https://www.amorporlivros.com.br/wp-content/uploads/resenha-quarta-asa.webp" 
-              class="bg-dark shadow-sm mx-auto"
-              style="width: 70%; height: 300px; border-radius: 21px 21px 0 0;" 
-              alt="livro-quarta-asa-capa">
+          <div
+            class="bg-body-tertiary rounded-bottom me-md-3 pt-3 px-3 pt-md-5 px-md-5 mb-4 text-center overflow-hidden">
+            <img src="imagens/resenhas/r-capa-2.png"
+              class="bg-dark shadow-sm mx-auto capa-mobile"
+              style="width: 70%; height: 300px; border-radius: 21px 21px 0 0;" alt="livro-quarta-asa-capa">
           </div>
 
           <h2 class="display-5 link-body-emphasis mb-1">Quarta Asa, Série Empyrean #1</h2>
@@ -156,54 +245,57 @@
           </figure>
 
           <p>
-            A versão resumida de Quarta Asa é: uma jovem em apuros com uma inteligência subestimada, um moreno perigoso com um
+            A versão resumida de Quarta Asa é: uma jovem em apuros com uma inteligência subestimada, um moreno perigoso
+            com um
             passado mal resolvido, e um plano em andamento muito maior do que eles.
           </p>
 
           <p>
-            Já na versão não tão resumida, aqui seguimos o desenrolar da história de Violet, uma jovem que estudou a vida toda para
-            ser Escriba, alguém responsável por guardar os maiores segredos do reino e dar continuidade ao conhecimento das gerações
+            Já na versão não tão resumida, aqui seguimos o desenrolar da história de Violet, uma jovem que estudou a
+            vida toda para
+            ser Escriba, alguém responsável por guardar os maiores segredos do reino e dar continuidade ao conhecimento
+            das gerações
             passadas.
           </p>
 
           <p>
-            Depois de crescer entre livros, memorizar rituais, mapas e fatos históricos, qual a sua surpresa quando a mãe — a
+            Depois de crescer entre livros, memorizar rituais, mapas e fatos históricos, qual a sua surpresa quando a
+            mãe — a
             general comandante de Navarre — a obriga a entrar na Divisão dos Cavaleiros.
           </p>
 
           <p>
-            E não é um “a minha mãe mandou eu fazer tal curso”. É mais uma questão de “os soldados dela me arrastarão até o portão
+            E não é um “a minha mãe mandou eu fazer tal curso”. É mais uma questão de “os soldados dela me arrastarão
+            até o portão
             correto e me jogarão do parapeito se eu não usar minhas próprias pernas”.
           </p>
 
           <p>Quer dizer, uma dinâmica bem saudável.</p>
 
           <p>
-            O Instituto Militar de Basgiath funciona com base em quatro Divisões: a <strong>Hospitalar</strong>, a dos <strong>Escribas</strong>, a da <strong>Infantaria</strong> e a
+            O Instituto Militar de Basgiath funciona com base em quatro Divisões: a <strong>Hospitalar</strong>, a dos
+            <strong>Escribas</strong>, a da <strong>Infantaria</strong> e a
             dos <strong>Cavaleiros</strong>. A última sendo a de maior prestígio e menor expectativa de vida.
           </p>
 
           <p>
-            No caso da divisão dos Cavaleiros, naturalmente eles passam por todo tipo de teste físico, além de aprenderem manobras
+            No caso da divisão dos Cavaleiros, naturalmente eles passam por todo tipo de teste físico, além de
+            aprenderem manobras
             de combate corpo a corpo e serem instigados ao conflito.
           </p>
 
           <p>
-            Contudo, além de Violet ser menor que todos os outros cadetes e ter anos de desvantagem no preparo, a nossa mocinha
+            Contudo, além de Violet ser menor que todos os outros cadetes e ter anos de desvantagem no preparo, a nossa
+            mocinha
             também sofre de uma doença que enfraquece seus ossos e que será sua ruína se descobrirem.
           </p>
 
           <div class="d-flex align-items-center justify-content-center mt-5">
             <figure class="figure">
-              <img
-                src="https://www.amorporlivros.com.br/wp-content/uploads/violet-academia-basgiath-war.webp"
-                class="figure-img img-fluid rounded"
-                alt="livro-quarta-asa"
-                style="height: 30rem;">
+              <img src="imagens/resenhas/r-livro-2.png"
+                class="figure-img img-fluid rounded" alt="livro-quarta-asa" style="height: 30rem;">
               <figcaption class="figure-caption text-center">O parapeito por
-                <a
-                  href="https://www.instagram.com/booknuts_/"
-                  target="_blank"
+                <a href="https://www.instagram.com/booknuts_/" target="_blank"
                   class="text-white text-decoration-none">Booknuts
                 </a>
               </figcaption>
@@ -214,21 +306,23 @@
         <hr />
 
         <article class="blog-post mt-5" id="imperio-romano-isaac-asimov-resenha">
-          <div class="bg-body-tertiary rounded-bottom me-md-3 pt-3 px-3 pt-md-5 px-md-5 mb-4 text-center overflow-hidden">
-            <img
-              src="https://www.estantediagonal.com.br/wp-content/uploads/2024/07/IMG_1738-rotated-850x200.jpg"
-              class="bg-dark shadow-sm mx-auto"
+          <div
+            class="bg-body-tertiary rounded-bottom me-md-3 pt-3 px-3 pt-md-5 px-md-5 mb-4 text-center overflow-hidden">
+            <img src="imagens/resenhas/r-capa-3.png"
+              class="bg-dark shadow-sm mx-auto capa-mobile"
               style="width: 70%; height: 300px; border-radius: 21px 21px 0 0;"
               alt="livro-imperio-romano-isaac-asimov-capa">
           </div>
-        
+
           <h2 class="display-5 link-body-emphasis mb-1">Império Romano – Isaac Asimov</h2>
           <p class="blog-post-meta">Ago 11, 2024 por <strong>Gabi Viana</strong></p>
-        
+
           <figure class="text-center">
             <blockquote class="blockquote">
-              <p>"Jesus foi, portanto, crucificado como se fosse um rebelde a mais, recebendo o castigo habitual; isso parecia ser tudo.
-                  Nenhum romano da época poderia ter imaginado, naquele momento, que tal crucificação seria apenas um início."
+              <p>"Jesus foi, portanto, crucificado como se fosse um rebelde a mais, recebendo o castigo habitual; isso
+                parecia ser tudo.
+                Nenhum romano da época poderia ter imaginado, naquele momento, que tal crucificação seria apenas um
+                início."
               </p>
             </blockquote>
             <figcaption class="blockquote-footer">
@@ -237,42 +331,53 @@
           </figure>
 
           <p>
-            Continuando a publicação da coleção História Universal Isaac Asimov, a editora Planeta Minotauro traz o terceiro livro
-            da coleção, O Império Romano: A Ascensão e a Queda do Maior Império da Antiguidade. A ideia desses livros é apresentar a
-            história de formação das maiores civilizações do mundo. O primeiro volume foi sobre os egípcios e o segundo sobre os
+            Continuando a publicação da coleção História Universal Isaac Asimov, a editora Planeta Minotauro traz o
+            terceiro livro
+            da coleção, O Império Romano: A Ascensão e a Queda do Maior Império da Antiguidade. A ideia desses livros é
+            apresentar a
+            história de formação das maiores civilizações do mundo. O primeiro volume foi sobre os egípcios e o segundo
+            sobre os
             gregos.
           </p>
 
           <p>
-            Asimov tem um livro no qual ele apresenta o surgimento de Roma. Ele relata tudo que aconteceu em alguns séculos até a
-            chegada de <strong>Otaviano</strong>, sobrinho de <strong>Júlio César</strong> ao poder. A partir desse ponto, temos o começo desse livro. Então, em
-            <strong>Império Romano</strong>, Isaac Asimov apresenta e elabora as principais linhas do desenvolvimento desse grande poder do Mundo
-            Antigo, desde a proclamação de Augusto como imperador até a queda do Império Romano Ocidental e o estabelecimento dos
+            Asimov tem um livro no qual ele apresenta o surgimento de Roma. Ele relata tudo que aconteceu em alguns
+            séculos até a
+            chegada de <strong>Otaviano</strong>, sobrinho de <strong>Júlio César</strong> ao poder. A partir desse
+            ponto, temos o começo desse livro. Então, em
+            <strong>Império Romano</strong>, Isaac Asimov apresenta e elabora as principais linhas do desenvolvimento
+            desse grande poder do Mundo
+            Antigo, desde a proclamação de Augusto como imperador até a queda do Império Romano Ocidental e o
+            estabelecimento dos
             reinos germânicos.
           </p>
 
           <p>
-            Começamos, então, vendo como Otaviano, no poder, se dispôs a organizar o governo. Muito interessante que aqui temos o
-            relato dos acontecimentos envolvendo a crucificação de Jesus. Depois disso passamos a sucessão de Augusto, contudo ele
-            não tinha filho homem, somente uma filha mulher. Passamos por uma sucessão de nomes e de seus momentos envolvendo
-            filosofia e religião. Após muitos momentos de glória e de dificuldades, tempos a parte focada nos reinos germânicos. O
+            Começamos, então, vendo como Otaviano, no poder, se dispôs a organizar o governo. Muito interessante que
+            aqui temos o
+            relato dos acontecimentos envolvendo a crucificação de Jesus. Depois disso passamos a sucessão de Augusto,
+            contudo ele
+            não tinha filho homem, somente uma filha mulher. Passamos por uma sucessão de nomes e de seus momentos
+            envolvendo
+            filosofia e religião. Após muitos momentos de glória e de dificuldades, tempos a parte focada nos reinos
+            germânicos. O
             livro ainda conta com uma vasta cronologia de todos os fatos no final.
           </p>
 
           <p>
-            A escrita do Asimov é ótima, muito fluida e direta, assim, sem muita enrolação, todas as informações são expostas. Eu
-            gosto bastante, apesar de achar que recebo muitas informações ao mesmo tempo e sinto em alguns momentos que me perco.
-            Fazer a leitura desse terceiro volume foi muito importante, pois podemos juntar algumas pessoas de acontecimentos dos
+            A escrita do Asimov é ótima, muito fluida e direta, assim, sem muita enrolação, todas as informações são
+            expostas. Eu
+            gosto bastante, apesar de achar que recebo muitas informações ao mesmo tempo e sinto em alguns momentos que
+            me perco.
+            Fazer a leitura desse terceiro volume foi muito importante, pois podemos juntar algumas pessoas de
+            acontecimentos dos
             outros livros, lembrei de algumas informações sobre o Egito.
           </p>
-        
+
           <div class="d-flex align-items-center justify-content-center mt-5">
             <figure class="figure">
-              <img
-                src="https://www.estantediagonal.com.br/wp-content/uploads/2024/07/IMG_1745.jpg"
-                class="figure-img img-fluid rounded"
-                alt="livro-imperio-romano-isaac-asimov"
-                style="height: 30rem;">
+              <img src="imagens/resenhas/r-livro-3.png"
+                class="figure-img img-fluid rounded" alt="livro-imperio-romano-isaac-asimov" style="height: 30rem;">
               <figcaption class="figure-caption text-center">Detalhes do livro por
                 <span class="text-white text-decoration-none">Autor</span>
               </figcaption>
@@ -284,14 +389,15 @@
   </main>
 
   <footer class="py-5 mt-auto text-center text-body-secondary bg-body-tertiary">
-    <p>Blog feito com &#128150; pela Gabi</p>
+    <p id="par-footer">Blog feito com &#128150; pela Gabi</p>
     <p class="mb-0">
-      <a class="text-decoration-none" href="#">Voltar para o topo da página</a>
+      <a class="text-decoration-none text-white" href="#">Voltar para o topo da página</a>
     </p>
   </footer>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
+  <script src="js/theme.js"></script>
 </body>
 
 </html>
